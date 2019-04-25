@@ -133,7 +133,7 @@ def prepare_stack(iDict):
 
 def run_stack(iDict, run_file_dir='./run_files'):
     # read job config file
-    config_dir = os.path.expandvars('${PYSAR_HOME}/pysar/defaults')
+    config_dir = os.path.expandvars('${MINTPY_HOME}/pysar/defaults')
     config_file = os.path.join(config_dir, 'job4{}.cfg'.format(iDict['processor']))
     if not os.path.isfile(config_file):
         raise ValueError('job config file NOT found, it should be: {}'.format(config_file))

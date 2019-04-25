@@ -85,7 +85,7 @@ def create_parser():
                         help='specify custom working directory. The default is:\n' +
                              'a) current directory, OR\n' +
                              'b) $SCRATCHDIR/projectName/PYSAR, if:\n' +
-                             '    1) autoPath == True in $PYSAR_HOME/pysar/defaults/auto_path.py AND\n' +
+                             '    1) autoPath == True in $MINTPY_HOME/pysar/defaults/auto_path.py AND\n' +
                              '    2) environment variable $SCRATCHDIR exists AND\n' +
                              '    3) customTemplateFile is specified (projectName.*)\n')
 

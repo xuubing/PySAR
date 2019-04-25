@@ -14,10 +14,10 @@ from pysar.version import *
 __version__ = release_version
 
 try:
-    os.environ['PYSAR_HOME']
+    os.environ['MINTPY_HOME']
 except KeyError:
     print('Using default PySAR Path: %s' % (pysar_path))
-    os.environ['PYSAR_HOME'] = pysar_path
+    os.environ['MINTPY_HOME'] = pysar_path
 
 
 ## Modules dependency graph

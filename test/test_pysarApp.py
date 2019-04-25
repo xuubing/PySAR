@@ -60,7 +60,7 @@ for i in idx:
     os.chdir(work_dir)
     print('Go to work directory:', work_dir)
 
-    cmd = 'pysarApp.py $PYSAR_HOME/examples/input_files/{}.txt'.format(proj_name)
+    cmd = 'pysarApp.py $MINTPY_HOME/examples/input_files/{}.txt'.format(proj_name)
     cmd = os.path.expandvars(cmd)
     status = subprocess.Popen(cmd, shell=True).wait()
     if status is not 0:

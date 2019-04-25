@@ -96,7 +96,7 @@ git push -f my_user_name my_new_feature_branch
 It's a good idea to test any changes or bugs you have fixed. We realize that we don't have a complete testing system in place yet, except for an overall testing script `test_pysarApp.py`, run
 
 ```
-${PYSAR_HOME}/test/test_pysarApp.py
+${MINTPY_HOME}/test/test_pysarApp.py
 ```
 
 to see the testing result, it takes about 10 mins to finish.

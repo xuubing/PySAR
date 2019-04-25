@@ -22,7 +22,7 @@ sudo xcodebuild -license
 To use the package, you need to setup the environment:
 
 1. To make pysar importable in python, by adding the path to PySAR directory to your _$PYTHONPATH_    
-2. To make utility scripts available in command line, by adding _${PYSAR_HOME}/pysar_ and _${PYSAR_HOME}/sh_ to your _$path_.   
+2. To make utility scripts available in command line, by adding _${MINTPY_HOME}/pysar_ and _${MINTPY_HOME}/sh_ to your _$path_.   
 
 Add to your **_~/.bash_profile_** file for _bash_ user:
 
@@ -31,9 +31,9 @@ Add to your **_~/.bash_profile_** file for _bash_ user:
 if [ -z ${PYTHONPATH+x} ]; then export PYTHONPATH=""; fi
 
 ##--------- PySAR ------------------##
-export PYSAR_HOME=~/python/PySAR
-export PYTHONPATH=${PYTHONPATH}:${PYSAR_HOME}
-export PATH=${PATH}:${PYSAR_HOME}/pysar:${PYSAR_HOME}/sh
+export MINTPY_HOME=~/python/PySAR
+export PYTHONPATH=${PYTHONPATH}:${MINTPY_HOME}
+export PATH=${PATH}:${MINTPY_HOME}/pysar:${MINTPY_HOME}/sh
 
 ##--------- PyAPS ------------------## 
 export PYAPS_HOME=~/python/PyAPS
@@ -74,7 +74,7 @@ chmod +x Miniconda3-4.5.4-MacOSX-x86_64.sh
 
 # install dependencies with conda
 $PYTHON3DIR/bin/conda config --add channels conda-forge
-$PYTHON3DIR/bin/conda install --yes --file $PYSAR_HOME/docs/conda.txt
+$PYTHON3DIR/bin/conda install --yes --file $MINTPY_HOME/docs/conda.txt
 
 # install pykml
 git clone https://github.com/yunjunz/pykml.git; cd pykml
@@ -116,7 +116,7 @@ mdkir PyAPS; cd PyAPS
 git clone https://github.com/yunjunz/pyaps3.git
 
 # install dependencies with macports
-sudo port install $(cat $PYSAR_HOME/docs/ports.txt)
+sudo port install $(cat $MINTPY_HOME/docs/ports.txt)
 
 # install pykml
 git clone https://github.com/yunjunz/pykml.git; cd pykml
@@ -152,7 +152,7 @@ We use [Dask](www.dask.org) for parallel processing on High Performance Compute 
 
 ```
 mkdir -p ~/.config/dask
-cp $PYSAR_HOME/pysar/defaults/dask_pysar.yaml ~/.config/dask/dask_pysar.yaml
+cp $MINTPY_HOME/pysar/defaults/dask_pysar.yaml ~/.config/dask/dask_pysar.yaml
 ```
 
 #### Notes on pyKML
